@@ -1,22 +1,30 @@
 from textblob import TextBlob
 import re
+import pandas as pd
 
 # Emoji possibilities organized by subjectivity
 first_subjectivity_layer = ["☹️", "🙁", "", "", "😏", "🙂"]
 second_subjectivity_layer = ["😭", "😢", "😓", "😊", "😀", "😁"]
 third_subjectivity_layer = ["🤬", "😡", "😠", "😄", "😅", "🤩"]
 
+delim = '([.!;?\n-])'
+
 # Returns Emoji-ed version of the given text
 def get_output_text(input_text):
-    split_text = re.split('([.!);?\n])', input_text)
+    split_text = re.split(delim, input_text)
     output_text = ""
+    sentiment_data = []
 
+    # Analyze each tokenized section in input text
     for section in split_text:
-        if len(section.strip()) > 0:
-            _, new_text = analyze(section)
+        if len(section.strip()) > 0 and not re.match(delim, section):
+            sentiment, new_text, emoji = analyze(section)
             output_text += new_text
+            sentiment_data.append([section, emoji, sentiment.polarity, sentiment.subjectivity])
 
-    return output_text
+    sentiment_dataframe = pd.DataFrame(sentiment_data, columns = ["Text", "Chosen emoji", "Polarity", "Subjectivity"])
+
+    return sentiment_dataframe, output_text
 
 # Analyzes a single section of input text
 def analyze(section_text):
@@ -49,4 +57,4 @@ def analyze(section_text):
     else:
         emoji = layer[5]
 
-    return (tb.sentiment, section_text + emoji)
+    return (tb.sentiment, section_text + emoji, emoji)

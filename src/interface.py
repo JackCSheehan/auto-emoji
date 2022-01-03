@@ -7,7 +7,37 @@ from analysis import *
 ---
 '''
 
-input_text = st.text_area("Input text")
+'''
+**Input text**
+'''
+input_text = st.text_area("Input some text to have Emoji added")
 if st.button("Add Emoji"):
-    output_text = get_output_text(input_text)
+    '''
+    ---
+    **Output text**
+    '''
+    sentiment_data, output_text = get_output_text(input_text)
     st.write(output_text)
+
+    '''
+    ---
+    #### Analysis Data
+    ##### Input section sentiments
+    '''
+    st.table(sentiment_data)
+
+    '''
+    ##### Emoji Sentiment Heatmap
+    '''
+
+    '''
+    ##### Emoji Distribution
+    '''
+
+    '''
+    ##### Polarity/Section
+    '''
+
+    '''
+    ##### Subjectivity/Section
+    '''
