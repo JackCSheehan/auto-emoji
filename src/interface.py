@@ -22,7 +22,7 @@ important substrings from the input text delimited by major punctuations such as
 semicolons, etc. Each section is run through a sentiment analysis algorithm in order
 to determine the section's polarity and subjectivity.
 
-Emoji are chosen based on both the polarity and subjectivity of a section and replace the delimiting puncations.
+Emoji are chosen based on both the polarity and subjectivity of a section and replace the delimiting punctuations.
 Polarity is measured on scale from -1 to 1 and subjectivity is measured from 0 to 1. Negative sections
 are given sad or angry Emoji while positive sections are given happy or laughing Emoji.
 The subjectivity is used to determine the intensity of the Emoji; the more subjective, the more intense

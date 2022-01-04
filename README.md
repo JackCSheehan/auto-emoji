@@ -1,5 +1,5 @@
 # 😊 Auto Emoji 😁
-Automatic Emoji placement using sentiment analysis. Auto Emoji accepts a block of text from the user and adds Emoji throughout, using sentiment analysis to determine what Emoji to insert. You can try Auto Emoji out [here](https://github.com/JackCSheehan/auto-emoji).
+Automatic Emoji placement using sentiment analysis. Auto Emoji accepts a block of text from the user and adds Emoji throughout, using sentiment analysis to determine what Emoji to insert. You can try Auto Emoji out [here](https://auto-emoji-demo.herokuapp.com/).
 
 The text is split into sections delimited by various types of punctuations. The Emoji choice is based on both the polarity and subjectivity of a particular section. Below is a chart showing which Emoji choices correspond to which polarity and subjectivity scores:
 
