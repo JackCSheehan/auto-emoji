@@ -1,6 +1,5 @@
 from textblob import TextBlob
 import re
-import pandas as pd
 
 # Emoji possibilities organized by subjectivity
 first_subjectivity_layer = ["☹️", "🙁", "😑", "😐", "😏", "🙂"]
