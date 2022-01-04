@@ -3,7 +3,7 @@ Automatic Emoji placement using sentiment analysis. Auto Emoji accepts a block o
 
 The text is split into sections delimitated by a various types of punctuations. The Emoji choice is based on both the polarity and subjectivity of a particular section. Below is a chart showing which Emoji choices correspond to which polarity and subjectivity scores:
 
-![Emoji chart](https://raw.githubusercontent.com/JackCSheehan/auto-emoji/main/.github/chart.png)
+![Emoji chart](https://raw.githubusercontent.com/JackCSheehan/auto-emoji/main/.github/chart.png?raw=true)
 
 #### Tech Stack
 - Python
