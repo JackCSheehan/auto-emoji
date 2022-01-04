@@ -1,4 +1,3 @@
-from altair.vegalite.v4.schema.channels import Tooltip
 import pandas as pd
 import altair as alt
 
@@ -36,7 +35,7 @@ class SentimentVisualizer:
         chart = alt.Chart(self.sentiment_dataframe.reset_index()).mark_line().encode(
             x = alt.X("index", axis = alt.Axis(title = "Section", tickMinStep = 1)),
             y = "Polarity",
-            tooltip = ["Text", "Polarity"],
+            tooltip = ["Polarity", "Text"],
         ).interactive()
 
         if setStrokeOpacity:
@@ -50,7 +49,7 @@ class SentimentVisualizer:
         chart =  alt.Chart(self.sentiment_dataframe.reset_index()).mark_line(color = "orange").encode(
             x = alt.X("index", axis = alt.Axis(title = "Section", tickMinStep = 1)),
             y = "Subjectivity",
-            tooltip = ["Text", "Subjectivity"],
+            tooltip = ["Subjectivity", "Text"],
         ).interactive()
 
         if setStrokeOpacity:
