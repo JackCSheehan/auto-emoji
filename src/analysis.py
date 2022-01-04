@@ -7,7 +7,7 @@ first_subjectivity_layer = ["☹️", "🙁", "😑", "😐", "😏", "🙂"]
 second_subjectivity_layer = ["😭", "😢", "😓", "😊", "😀", "😁"]
 third_subjectivity_layer = ["🤬", "😡", "😠", "😄", "😅", "🤩"]
 
-delim = '[.!;?\n\-,]'
+delim = '[.!;?,]'
 
 class Analyzer:
     def __init__(self):

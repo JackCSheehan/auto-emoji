@@ -15,7 +15,7 @@ class SentimentVisualizer:
         return alt.Chart(self.sentiment_dataframe).mark_circle(color = "orange", size = 100).encode(
             x = alt.X("Polarity", scale = alt.Scale(domain = (-1, 1)), axis = alt.Axis(tickMinStep = .33)),
             y = alt.Y("Subjectivity", scale = alt.Scale(domain = (0, 1)), axis = alt.Axis(tickMinStep = .33)),
-            tooltip = ["Subjectivity", "Polarity"]
+            tooltip = ["Subjectivity", "Polarity", "Chosen Emoji"],
         ).configure_view(
             strokeOpacity = 0
         )
@@ -23,9 +23,9 @@ class SentimentVisualizer:
     # Generates Altair pie chart showing distribution of Emoji choices
     def create_emoji_distribution(self):
         return alt.Chart(self.sentiment_dataframe).mark_arc().encode(
-            theta = "Chosen Emoji",
+            theta = "count(Chosen Emoji)",
             color = alt.Color("Chosen Emoji"),
-            tooltip = ["Chosen Emoji", "Polarity", "Subjectivity"]
+            tooltip = ["Chosen Emoji", "count(Chosen Emoji)"]
         ).configure_view(
             strokeOpacity = 0
         )
