@@ -14,7 +14,7 @@ class SentimentVisualizer:
         return alt.Chart(self.sentiment_dataframe).mark_circle(color = "orange", size = 100).encode(
             x = alt.X("Polarity", scale = alt.Scale(domain = (-1, 1)), axis = alt.Axis(tickMinStep = .33)),
             y = alt.Y("Subjectivity", scale = alt.Scale(domain = (0, 1)), axis = alt.Axis(tickMinStep = .33)),
-            tooltip = ["Subjectivity", "Polarity", "Chosen Emoji"],
+            tooltip = ["Subjectivity", "Polarity", "Chosen Emoji", "Text"],
         ).configure_view(
             strokeOpacity = 0
         )
