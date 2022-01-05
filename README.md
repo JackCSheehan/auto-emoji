@@ -11,6 +11,7 @@ The choice of the Emoji used to represent each polarity and subjectivity is a fa
 
 ### Tech Stack
 - Python
-- [TextBlob](https://github.com/sloria/TextBlob) (for both polarity and subjectivity analysis)
-- [Streamlit](https://github.com/streamlit/streamlit) (for the UI)
+- [TextBlob](https://textblob.readthedocs.io/en/dev/) (for both polarity and subjectivity analysis)
+- [Streamlit](https://streamlit.io/) (for the UI)
+- [Altair](https://altair-viz.github.io/) (for all data visualizations)
 - [Heroku](https://www.heroku.com/) (for web hosting)

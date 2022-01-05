@@ -30,8 +30,8 @@ and expressive the Emoji. The rule-based sentiment analysis used by TextBlob is 
 sometimes Emoji choices may not accurately reflect the actual sentiment of a sentence section.
 Nonetheless, Auto Emoji stands as a minimal and interactive demonstration of sentiment analysis.
 
-Auto Emoji is written in Python using [TextBlob](https://github.com/sloria/TextBlob)'s sentiment analysis algorithm. The interface
-is written in Python using the [Streamlit](https://github.com/streamlit/streamlit) library.
+Auto Emoji is written in Python using [TextBlob](https://textblob.readthedocs.io/en/dev/)'s sentiment analysis algorithm. The interface
+is written in Python using [Streamlit](https://streamlit.io/) and [Altair](https://altair-viz.github.io/).
 
 ##### Source Code and Contributing
 Auto Emoji's open source code is hosted on [GitHub](https://github.com/JackCSheehan/auto-emoji). Feel free to fork and make a pull request if you
