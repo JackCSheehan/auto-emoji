@@ -10,7 +10,7 @@ A more positive polarity corresponds to a more positive Emoji expression while a
 The choice of the Emoji used to represent each polarity and subjectivity is a fairly subjective process. I simply did my best to find Emoji which I felt best fit in each category.
 
 ### Tech Stack
-- Python
+- [Python](https://www.python.org/)
 - [TextBlob](https://textblob.readthedocs.io/en/dev/) (for both polarity and subjectivity analysis)
 - [Streamlit](https://streamlit.io/) (for the UI)
 - [Altair](https://altair-viz.github.io/) (for all data visualizations)
